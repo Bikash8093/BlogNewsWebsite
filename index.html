@@ -2,155 +2,643 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BharatNews — Real News. Real People. Real India.</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        BharatNews — Real News. Real People. Real India.
+    </title>
+
     <meta name="description"
-        content="Latest India, Odisha, business, technology, sports, entertainment, health and world news.">
+          content="Latest India, business, technology, sports, entertainment, health and world news.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- ================= GOOGLE FONTS ================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- ================= WEBSITE CSS ================= -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
 </head>
+
 
 <body>
 
-    <!-- ================= TOP HEADER ================= -->
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
     <header class="site-header">
+
         <div class="header-inner">
 
-            <a href="index.html" class="brand" aria-label="BharatNews Home">
-                <img src="assets/logo/bharat-news-logo.png" alt="">
+
+            <!-- LOGO -->
+
+            <a href="index.html"
+               class="brand"
+               aria-label="BharatNews Home">
+
+                <img src="assets/logo/bharat-news-logo.png"
+                     alt="BharatNews">
+
             </a>
 
-            <form class="search-box" id="searchForm">
-                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input id="searchInput" type="search" placeholder="Search news, topics, places..." >
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
 
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fa-regular fa-sun"></i>
-                    <span class="toggle-track"><span class="toggle-knob"></span></span>
+            <!-- SEARCH -->
+
+            <form class="search-box"
+                  id="searchForm">
+
+                <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search news, topics, places..."
+                    autocomplete="off"
+                >
+
+                <button type="submit"
+                        aria-label="Search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
                 </button>
 
+            </form>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-regular fa-sun"></i>
+
+                    <span class="toggle-track">
+
+                        <span class="toggle-knob"></span>
+
+                    </span>
+
+                </button>
+
+
+                <!-- SOCIAL LINKS -->
+
                 <div class="socials">
+
 
                     <a href="https://youtube.com/">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
 
+
                     <a href="https://wa.me/">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
+
 
                     <a href="https://x.com/">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
+
                     <a href="https://facebook.com/">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
+
 
                     <a href="https://instagram.com/">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
+
                 </div>
 
-                <div class="today-date" id="todayDate"></div>
+
+                <!-- DATE -->
+
+                <div class="today-date"
+                     id="todayDate">
+                </div>
+
+
             </div>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+
         </div>
+
     </header>
 
-    <!-- ================= NAVIGATION ================= -->
-    <nav class="main-nav" id="mainNav">
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="main-nav"
+         id="mainNav">
+
         <div class="nav-inner">
-            <a class="nav-link active" href="#home"><img src="https://cdn-icons-png.flaticon.com/128/1946/1946436.png" alt=""> <span>Home</span></a>
-            <a class="nav-link" href="#india"><img src="https://cdn-icons-png.flaticon.com/128/7715/7715692.png" alt=""> <span>India</span></a>
-            <a class="nav-link" href="#odisha"><img src="https://static.thenounproject.com/png/odisha-map-icon-3903612-512.png" alt=""> <span>Odisha</span></a>
-            <a class="nav-link" href="#politics"><img src="https://cdn-icons-png.flaticon.com/128/1672/1672320.png" alt=""> <span>Politics</span></a>
-            <a class="nav-link" href="#business"><img src="https://cdn-icons-png.flaticon.com/128/9139/9139531.png" alt=""> <span>Business</span></a>
-            <a class="nav-link" href="#technology"><img src="https://cdn-icons-png.flaticon.com/128/597/597218.png" alt=""> <span>Technology</span></a>
-            <a class="nav-link" href="#sports"><img src="https://cdn-icons-png.flaticon.com/128/763/763965.png" alt=""> <span>Sports</span></a>
-            <a class="nav-link" href="#entertainment"><img src="https://cdn-icons-png.flaticon.com/128/10284/10284428.png" alt=""> <span>Entertainment</span></a>
-            <a class="nav-link" href="#health"><img src="https://cdn-icons-png.flaticon.com/128/154/154016.png" alt=""> <span>Health</span></a>
-            <a class="nav-link" href="#education"><img src="https://cdn-icons-png.flaticon.com/128/9232/9232084.png" alt=""> <span>Education</span></a>
-            <a class="nav-link" href="#world"><img src="https://cdn-icons-png.flaticon.com/128/7192/7192499.png" alt=""> <span>World</span></a>
-            <a class="nav-link" href="#more"><img src="https://cdn-icons-png.flaticon.com/128/10348/10348852.png" alt=""> <span>More</span></a>
+
+
+            <a class="nav-link active"
+               href="#home">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946436.png"
+                     alt="">
+
+                <span>
+                    Home
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#india">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/7715/7715692.png"
+                     alt="">
+
+                <span>
+                    India
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#politics">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/1672/1672320.png"
+                     alt="">
+
+                <span>
+                    Politics
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#business">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/9139/9139531.png"
+                     alt="">
+
+                <span>
+                    Business
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#technology">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/597/597218.png"
+                     alt="">
+
+                <span>
+                    Technology
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#sports">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/763/763965.png"
+                     alt="">
+
+                <span>
+                    Sports
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#entertainment">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/10284/10284428.png"
+                     alt="">
+
+                <span>
+                    Entertainment
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#health">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/154/154016.png"
+                     alt="">
+
+                <span>
+                    Health
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#education">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/9232/9232084.png"
+                     alt="">
+
+                <span>
+                    Education
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#world">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/7192/7192499.png"
+                     alt="">
+
+                <span>
+                    World
+                </span>
+
+            </a>
+
+
+            <a class="nav-link"
+               href="#more">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/10348/10348852.png"
+                     alt="">
+
+                <span>
+                    More
+                </span>
+
+            </a>
+
+
         </div>
+
     </nav>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main id="home">
 
-        <!-- ================= HERO ================= -->
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
         <section class="hero-section">
+
             <div class="hero-container">
 
-                <div class="hero-main" id="heroMain">
+
+                <!-- HERO MAIN -->
+
+                <div class="hero-main"
+                     id="heroMain">
+
                     <div class="hero-loading">
+
                         <div class="spinner"></div>
-                        <span>Loading latest news...</span>
+
+                        <span>
+                            Loading latest news...
+                        </span>
+
                     </div>
+
                 </div>
+
+
+                <!-- TRENDING -->
 
                 <aside class="trending-panel">
+
                     <div class="section-mini-head">
-                        <h2><i class="fa-solid fa-arrow-trend-up"></i> Trending News</h2>
-                        <button id="viewTrending">View All →</button>
+
+                        <h2>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Trending News
+                        </h2>
+
+                        <button id="viewTrending">
+                            View All →
+                        </button>
+
                     </div>
 
-                    <div class="trending-list" id="trendingList">
+
+                    <div class="trending-list"
+                         id="trendingList">
+
+
                         <div class="skeleton skeleton-trend"></div>
+
                         <div class="skeleton skeleton-trend"></div>
+
                         <div class="skeleton skeleton-trend"></div>
+
                         <div class="skeleton skeleton-trend"></div>
+
                         <div class="skeleton skeleton-trend"></div>
+
+
                     </div>
+
                 </aside>
 
+
             </div>
 
-            <div class="hero-dots" id="heroDots"></div>
+
+            <!-- HERO DOTS -->
+
+            <div class="hero-dots"
+                 id="heroDots">
+            </div>
+
+
         </section>
 
-        <!-- ================= CATEGORY STRIP ================= -->
-        <section class="category-section page-section" id="categories">
+
+
+        <!-- =================================================
+             CATEGORY STRIP
+        ================================================== -->
+
+        <section class="category-section page-section"
+                 id="categories">
+
+
             <div class="section-title-row">
-                <h2><span class="red-line"></span>Latest News by Category</h2>
-                <button class="text-link" id="viewCategories">View All Categories →</button>
+
+                <h2>
+
+                    <span class="red-line"></span>
+
+                    Latest News by Category
+
+                </h2>
+
+
+                <button class="text-link"
+                        id="viewCategories">
+
+                    View All Categories →
+
+                </button>
+
             </div>
 
-            <div class="category-tabs" id="categoryTabs">
-                <button class="category-tab active" data-category="nation"><img src="https://cdn-icons-png.flaticon.com/128/7715/7715692.png" alt=""><span>India</span></button>
-                <button class="category-tab" data-category="odisha"><img src="https://static.thenounproject.com/png/odisha-map-icon-3903612-512.png" alt=""><span>Odisha</span></button>
-                <button class="category-tab" data-category="politics"><img src="https://cdn-icons-png.flaticon.com/128/1672/1672320.png" alt=""><span>Politics</span></button>
-                <button class="category-tab" data-category="business"><img src="https://cdn-icons-png.flaticon.com/128/9139/9139531.png" alt=""><span>Business</span></button>
-                <button class="category-tab" data-category="technology"><img src="https://cdn-icons-png.flaticon.com/128/597/597218.png" alt=""><span>Technology</span></button>
-                <button class="category-tab" data-category="sports"><img src="https://cdn-icons-png.flaticon.com/128/763/763965.png" alt=""><span>Sports</span></button>
-                <button class="category-tab" data-category="entertainment"><img src="https://cdn-icons-png.flaticon.com/128/10284/10284428.png" alt=""><span>Entertainment</span></button>
-                <button class="category-tab" data-category="health"><img src="https://cdn-icons-png.flaticon.com/128/154/154016.png" alt=""><span>Health</span></button>
-                <button class="category-tab" data-category="education"><img src="https://cdn-icons-png.flaticon.com/128/9232/9232084.png" alt=""><span>Education</span></button>
-                <button class="category-tab" data-category="world"><img src="https://cdn-icons-png.flaticon.com/128/7192/7192499.png" alt=""><span>World</span></button>
+
+
+            <div class="category-tabs"
+                 id="categoryTabs">
+
+
+                <!-- INDIA -->
+
+                <button class="category-tab active"
+                        data-category="nation">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/7715/7715692.png"
+                        alt="">
+
+                    <span>
+                        India
+                    </span>
+
+                </button>
+
+
+                <!-- POLITICS -->
+
+                <button class="category-tab"
+                        data-category="politics">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/1672/1672320.png"
+                        alt="">
+
+                    <span>
+                        Politics
+                    </span>
+
+                </button>
+
+
+                <!-- BUSINESS -->
+
+                <button class="category-tab"
+                        data-category="business">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/9139/9139531.png"
+                        alt="">
+
+                    <span>
+                        Business
+                    </span>
+
+                </button>
+
+
+                <!-- TECHNOLOGY -->
+
+                <button class="category-tab"
+                        data-category="technology">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/597/597218.png"
+                        alt="">
+
+                    <span>
+                        Technology
+                    </span>
+
+                </button>
+
+
+                <!-- SPORTS -->
+
+                <button class="category-tab"
+                        data-category="sports">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/763/763965.png"
+                        alt="">
+
+                    <span>
+                        Sports
+                    </span>
+
+                </button>
+
+
+                <!-- ENTERTAINMENT -->
+
+                <button class="category-tab"
+                        data-category="entertainment">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/10284/10284428.png"
+                        alt="">
+
+                    <span>
+                        Entertainment
+                    </span>
+
+                </button>
+
+
+                <!-- HEALTH -->
+
+                <button class="category-tab"
+                        data-category="health">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/154/154016.png"
+                        alt="">
+
+                    <span>
+                        Health
+                    </span>
+
+                </button>
+
+
+                <!-- EDUCATION -->
+
+                <button class="category-tab"
+                        data-category="education">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/9232/9232084.png"
+                        alt="">
+
+                    <span>
+                        Education
+                    </span>
+
+                </button>
+
+
+                <!-- WORLD -->
+
+                <button class="category-tab"
+                        data-category="world">
+
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/7192/7192499.png"
+                        alt="">
+
+                    <span>
+                        World
+                    </span>
+
+                </button>
+
+
             </div>
+
         </section>
 
-        <!-- ================= MAIN NEWS GRID ================= -->
-        <section class="news-section page-section" id="india">
+
+
+        <!-- =================================================
+             INDIA NEWS
+        ================================================== -->
+
+        <section class="news-section page-section"
+                 id="india">
+
+
             <div class="section-title-row">
-                <h2><span class="red-line"></span>Latest India News</h2>
-                <button class="text-link" data-search-category="nation">View All →</button>
+
+                <h2>
+
+                    <span class="red-line"></span>
+
+                    Latest India News
+
+                </h2>
+
+
+                <button class="text-link"
+                        data-search-category="nation">
+
+                    View All →
+
+                </button>
+
             </div>
 
-            <div class="news-grid" id="indiaGrid">
+
+            <div class="news-grid"
+                 id="indiaGrid">
+
+
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
@@ -159,152 +647,501 @@
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
+
+
             </div>
+
         </section>
 
-        <!-- ================= DYNAMIC CATEGORY SECTIONS ================= -->
-        <section class="news-section page-section" id="odisha">
+
+
+        <!-- =================================================
+             BUSINESS
+        ================================================== -->
+
+        <section class="news-section page-section"
+                 id="business">
+
+
             <div class="section-title-row">
-                <h2><span class="red-line"></span>Odisha News</h2>
-                <button class="text-link" data-search-query="Odisha">View All →</button>
+
+                <h2>
+
+                    <span class="red-line"></span>
+
+                    Business
+
+                </h2>
+
+
+                <button class="text-link"
+                        data-search-category="business">
+
+                    View All →
+
+                </button>
+
             </div>
-            <div class="news-grid compact-grid" id="odishaGrid"></div>
+
+
+            <div class="news-grid compact-grid"
+                 id="businessGrid">
+            </div>
+
+
         </section>
 
-        <section class="news-section page-section" id="business">
+
+
+        <!-- =================================================
+             TECHNOLOGY
+        ================================================== -->
+
+        <section class="news-section page-section"
+                 id="technology">
+
+
             <div class="section-title-row">
-                <h2><span class="red-line"></span>Business</h2>
-                <button class="text-link" data-search-category="business">View All →</button>
+
+                <h2>
+
+                    <span class="red-line"></span>
+
+                    Technology
+
+                </h2>
+
+
+                <button class="text-link"
+                        data-search-category="technology">
+
+                    View All →
+
+                </button>
+
             </div>
-            <div class="news-grid compact-grid" id="businessGrid"></div>
+
+
+            <div class="news-grid compact-grid"
+                 id="technologyGrid">
+            </div>
+
+
         </section>
 
-        <section class="news-section page-section" id="technology">
+
+
+        <!-- =================================================
+             SPORTS
+        ================================================== -->
+
+        <section class="news-section page-section"
+                 id="sports">
+
+
             <div class="section-title-row">
-                <h2><span class="red-line"></span>Technology</h2>
-                <button class="text-link" data-search-category="technology">View All →</button>
+
+                <h2>
+
+                    <span class="red-line"></span>
+
+                    Sports
+
+                </h2>
+
+
+                <button class="text-link"
+                        data-search-category="sports">
+
+                    View All →
+
+                </button>
+
             </div>
-            <div class="news-grid compact-grid" id="technologyGrid"></div>
+
+
+            <div class="news-grid compact-grid"
+                 id="sportsGrid">
+            </div>
+
+
         </section>
 
-        <section class="news-section page-section" id="sports">
-            <div class="section-title-row">
-                <h2><span class="red-line"></span>Sports</h2>
-                <button class="text-link" data-search-category="sports">View All →</button>
-            </div>
-            <div class="news-grid compact-grid" id="sportsGrid"></div>
-        </section>
 
-        <!-- ================= NEWSLETTER ================= -->
+
+        <!-- =================================================
+             NEWSLETTER
+        ================================================== -->
+
         <section class="newsletter">
+
             <div class="newsletter-inner">
+
+
                 <div class="newsletter-copy">
-                    <div class="mail-icon"><i class="fa-regular fa-envelope"></i></div>
-                    <div>
-                        <h2>Stay Updated with the Latest News</h2>
-                        <p>Subscribe to our newsletter and never miss an important update.</p>
+
+                    <div class="mail-icon">
+
+                        <i class="fa-regular fa-envelope"></i>
+
                     </div>
+
+
+                    <div>
+
+                        <h2>
+                            Stay Updated with the Latest News
+                        </h2>
+
+                        <p>
+                            Subscribe to our newsletter and never
+                            miss an important update.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <form class="subscribe-form" id="subscribeForm">
-                    <input type="email" id="subscribeEmail" placeholder="Enter your email address" required>
-                    <button type="submit">Subscribe</button>
+
+
+                <form class="subscribe-form"
+                      id="subscribeForm">
+
+
+                    <input
+                        type="email"
+                        id="subscribeEmail"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+
+                    <button type="submit">
+
+                        Subscribe
+
+                    </button>
+
+
                 </form>
 
+
+
+                <!-- FOLLOW US -->
+
                 <div class="follow">
-                    <strong>Follow Us</strong>
+
+                    <strong>
+                        Follow Us
+                    </strong>
+
+
                     <div class="socials">
 
-          <a href="https://youtube.com/">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
 
-          <a href="https://wa.me/">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
+                        <a href="https://youtube.com/">
 
-          <a href="https://x.com/">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
+                            <i class="fa-brands fa-youtube"></i>
 
-          <a href="https://facebook.com/">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
+                        </a>
 
-          <a href="https://instagram.com/">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
 
-        </div>
+                        <a href="https://wa.me/">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a href="https://x.com/">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+
+                        <a href="https://facebook.com/">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+
+                        <a href="https://instagram.com/">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                    </div>
+
                 </div>
+
+
             </div>
+
         </section>
+
 
     </main>
 
-    <!-- ================= FOOTER ================= -->
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="site-footer">
+
+
         <div class="footer-main">
 
+
+            <!-- FOOTER BRAND -->
+
             <div class="footer-brand">
-                <a href="index.html" class="brand footer-logo">
+
+
+                <a href="index.html"
+                   class="brand footer-logo">
+
+
                     <div class="brand-mark">
+
                         <span class="brand-swoosh brand-saffron"></span>
+
                         <span class="brand-swoosh brand-green"></span>
-                        <span class="brand-dot">•</span>
+
+                        <span class="brand-dot">
+                            •
+                        </span>
+
                     </div>
+
+
                     <div class="brand-text">
-                        <strong><span>Bharat</span>News</strong>
-                        <small>Real News. Real People. Real India.</small>
+
+                        <strong>
+                            <span>Bharat</span>News
+                        </strong>
+
+                        <small>
+                            Real News. Real People. Real India.
+                        </small>
+
                     </div>
+
+
                 </a>
-                <p>Your trusted source for the latest news and stories from India and around the world. Stay informed,
-                    stay connected.</p>
+
+
+                <p>
+
+                    Your trusted source for the latest news
+                    and stories from India and around the world.
+                    Stay informed, stay connected.
+
+                </p>
+
+
             </div>
 
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <a href="#home">Home</a>
-                <a href="#india">India</a>
-                <a href="#odisha">Odisha</a>
-                <a href="#business">Business</a>
-                <a href="#technology">Technology</a>
-            </div>
+
+
+            <!-- QUICK LINKS -->
 
             <div class="footer-column">
-                <h3>Popular Topics</h3>
+
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="#home">
+                    Home
+                </a>
+
+
+                <a href="#india">
+                    India
+                </a>
+
+
+                <a href="#business">
+                    Business
+                </a>
+
+
+                <a href="#technology">
+                    Technology
+                </a>
+
+
+                <a href="#sports">
+                    Sports
+                </a>
+
+
+            </div>
+
+
+
+            <!-- POPULAR TOPICS -->
+
+            <div class="footer-column">
+
+
+                <h3>
+                    Popular Topics
+                </h3>
+
+
                 <div class="topic-pills">
-                    <a href="#">India News</a>
-                    <a href="#">Cricket</a>
-                    <a href="#">Education</a>
-                    <a href="#">Health</a>
-                    <a href="#">Odisha News</a>
-                    <a href="#">Bollywood</a>
+
+
+                    <a href="#">
+                        India News
+                    </a>
+
+
+                    <a href="#">
+                        Cricket
+                    </a>
+
+
+                    <a href="#">
+                        Education
+                    </a>
+
+
+                    <a href="#">
+                        Health
+                    </a>
+
+
+                    <a href="#">
+                        Bollywood
+                    </a>
+
+
+                    <a href="#">
+                        Technology
+                    </a>
+
+
                 </div>
+
+
             </div>
+
+
+
+            <!-- CONTACT -->
 
             <div class="footer-column contact-column">
-                <h3>Contact Us</h3>
-                <a href="mailto:info@bharatnews.in"><i class="fa-regular fa-envelope"></i> info@bharatnews.in</a>
-                <span><i class="fa-solid fa-location-dot"></i> Bhubaneswar, Odisha, India</span>
+
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <a href="mailto:info@bharatnews.in">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    info@bharatnews.in
+
+                </a>
+
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Bhubaneswar, India
+
+                </span>
+
+
                 <div class="footer-links">
-                    <a href="pages/about-us.html">About Us</a>
-                    <a href="pages/privacy-policy.html">Privacy Policy</a>
-                    <a href="pages/terms.html">Terms of Use</a>
+
+
+                    <a href="pages/about-us.html">
+                        About Us
+                    </a>
+
+
+                    <a href="pages/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+
+                    <a href="pages/terms.html">
+                        Terms of Use
+                    </a>
+
+
                 </div>
+
+
             </div>
 
+
         </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
 
         <div class="footer-bottom">
-            <span>© <span id="footerYear"></span> BharatNews. All Rights Reserved.</span>
+
+
+            <span>
+
+                ©
+                <span id="footerYear"></span>
+                BharatNews.
+                All Rights Reserved.
+
+            </span>
+
+
+            <span>
+
+                Designed with
+                <b>♥</b>
+                for a better informed India.
+
+            </span>
+
+
         </div>
+
+
     </footer>
 
-    <div class="toast" id="toast"></div>
+
+
+    <!-- TOAST -->
+
+    <div class="toast"
+         id="toast">
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="js/config.js"></script>
+
     <script src="js/index.js"></script>
+
+
 </body>
 
 </html>
