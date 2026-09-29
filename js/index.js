@@ -53,94 +53,45 @@ async function init() {
     if (
         !API_KEY || API_KEY === "YOUR_GNEWS_API_KEY"
     ) {
-
         showConfigurationError();
-
         return;
-
     }
-
-
-    /*
-     * Load homepage.
-     */
-
     await loadHomepage();
-
 }
 
 
-/* =========================================================
-   DATE
-========================================================= */
-
 function setDate() {
-
     const date =
         new Intl.DateTimeFormat(
             "en-IN",
             {
-
                 weekday: "long",
-
                 day: "2-digit",
-
                 month: "long",
-
                 year: "numeric"
-
             }
         ).format(new Date());
 
-
-    const element =
-        document.getElementById("todayDate");
-
+    const element = document.getElementById("todayDate");
 
     if (element) {
-
-        element.textContent =
-            date;
-
+        element.textContent = date;
     }
-
 }
 
 
-/* =========================================================
-   THEME
-========================================================= */
-
 function setupTheme() {
-
-    const saved =
-        localStorage.getItem(
-            "bharatnews-theme"
-        );
-
+    const saved = localStorage.getItem("bharatnews-theme");
 
     if (saved === "dark") {
-
-        document.body.classList.add(
-            "dark"
-        );
-
+        document.body.classList.add("dark");
     }
 
-
-    const toggle =
-        document.getElementById(
-            "themeToggle"
-        );
-
-
+    const toggle = document.getElementById("themeToggle");
     if (!toggle)
         return;
 
-
-    toggle.addEventListener(
-        "click",
-        () => {
+    toggle.addEventListener("click",() => {
 
             document.body.classList.toggle(
                 "dark"
@@ -1654,8 +1605,8 @@ function renderHero(
                 <h1>
 
                     ${escapeHTML(
-                        article.title
-                    )}
+        article.title
+    )}
 
                 </h1>
 
@@ -1664,13 +1615,13 @@ function renderHero(
 
                     ${escapeHTML(
 
-                        article.description ||
+        article.description ||
 
-                        getShortText(
-                            article.content
-                        )
+        getShortText(
+            article.content
+        )
 
-                    )}
+    )}
 
                 </p>
 
@@ -1740,10 +1691,9 @@ function renderHeroDots() {
 
         dot.className =
 
-            `hero-dot ${
-                i === state.heroIndex
-                    ? "active"
-                    : ""
+            `hero-dot ${i === state.heroIndex
+                ? "active"
+                : ""
             }`;
 
 
@@ -1758,7 +1708,7 @@ function renderHeroDots() {
                 renderHero(
 
                     state.articles[
-                        i
+                    i
                     ]
 
                 );
@@ -1813,7 +1763,7 @@ function startHeroRotation(
             renderHero(
 
                 articles[
-                    state.heroIndex
+                state.heroIndex
                 ]
 
             );
@@ -1880,11 +1830,11 @@ function renderTrending(
                     <span class="trend-number">
 
                         ${String(
-                            index + 1
-                        ).padStart(
-                            2,
-                            "0"
-                        )}
+                index + 1
+            ).padStart(
+                2,
+                "0"
+            )}
 
                     </span>
 
@@ -1902,8 +1852,8 @@ function renderTrending(
                         <h3>
 
                             ${escapeHTML(
-                                article.title
-                            )}
+                article.title
+            )}
 
                         </h3>
 
@@ -1911,8 +1861,8 @@ function renderTrending(
                         <small>
 
                             ${formatRelativeTime(
-                                article.publishedAt
-                            )}
+                article.publishedAt
+            )}
 
                         </small>
 
@@ -1996,8 +1946,8 @@ function renderNewsGrid(
                             >
 
                                 ${escapeHTML(
-                                    categoryLabel
-                                )}
+                categoryLabel
+            )}
 
                             </span>
 
@@ -2011,8 +1961,8 @@ function renderNewsGrid(
                             <h3>
 
                                 ${escapeHTML(
-                                    article.title
-                                )}
+                article.title
+            )}
 
                             </h3>
 
@@ -2021,15 +1971,15 @@ function renderNewsGrid(
 
                                 ${escapeHTML(
 
-                                    article.description ||
+                article.description ||
 
-                                    getShortText(
-                                        article.content
-                                    ) ||
+                getShortText(
+                    article.content
+                ) ||
 
-                                    "Open the story to read more."
+                "Open the story to read more."
 
-                                )}
+            )}
 
                             </p>
 
@@ -2052,8 +2002,8 @@ function renderNewsGrid(
                                     <span>
 
                                         ${escapeHTML(
-                                            article.source
-                                        )}
+                article.source
+            )}
 
                                     </span>
 
@@ -2065,8 +2015,8 @@ function renderNewsGrid(
                                     ◷
 
                                     ${formatRelativeTime(
-                                        article.publishedAt
-                                    )}
+                article.publishedAt
+            )}
 
                                 </span>
 
@@ -2222,9 +2172,9 @@ function renderError(
             <small>
 
                 ${escapeHTML(
-                    message ||
-                    "Unknown API error."
-                )}
+        message ||
+        "Unknown API error."
+    )}
 
             </small>
 
@@ -2347,8 +2297,8 @@ function showGlobalError(
                 <span>
 
                     ${escapeHTML(
-                        message
-                    )}
+            message
+        )}
 
                 </span>
 
@@ -2511,11 +2461,10 @@ function formatRelativeTime(
         minutes < 60
     ) {
 
-        return `${minutes} min${
-            minutes === 1
+        return `${minutes} min${minutes === 1
                 ? ""
                 : "s"
-        } ago`;
+            } ago`;
 
     }
 
@@ -2530,11 +2479,10 @@ function formatRelativeTime(
         hours < 24
     ) {
 
-        return `${hours} hour${
-            hours === 1
+        return `${hours} hour${hours === 1
                 ? ""
                 : "s"
-        } ago`;
+            } ago`;
 
     }
 
@@ -2549,11 +2497,10 @@ function formatRelativeTime(
         days < 7
     ) {
 
-        return `${days} day${
-            days === 1
+        return `${days} day${days === 1
                 ? ""
                 : "s"
-        } ago`;
+            } ago`;
 
     }
 
@@ -2633,10 +2580,10 @@ function safeUrl(
         if (
 
             parsed.protocol ===
-                "https:" ||
+            "https:" ||
 
             parsed.protocol ===
-                "http:"
+            "http:"
 
         ) {
 
@@ -2727,10 +2674,6 @@ function escapeAttribute(
 }
 
 
-/* =========================================================
-   TOAST
-========================================================= */
-
 function showToast(
     message
 ) {
@@ -2776,11 +2719,6 @@ function showToast(
         );
 
 }
-
-
-/* =========================================================
-   GLOBAL ARTICLE FUNCTION
-========================================================= */
 
 window.openArticle =
     openArticle;
