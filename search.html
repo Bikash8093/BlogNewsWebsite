@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search News — BharatNews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><div class="brand-mark"><i class="saffron"></i><i class="green"></i><b>•</b></div><div class="brand-copy"><strong><span>Bharat</span>News</strong><small>Real News. Real People. Real India.</small></div></a>
+    <form class="search-box" id="searchForm"><span>⌕</span><input id="searchInput" type="search" placeholder="Search news, topics, places..." required><button>⌕</button></form>
+    <a class="back-home" href="index.html">← Home</a>
+  </div>
+</header>
+<nav class="main-nav"><div class="nav-inner"><a class="active" href="index.html">⌂ Home</a><a href="search.html?q=India">✦ India</a><a href="search.html?q=Odisha">◉ Odisha</a><a href="search.html?q=business">▥ Business</a><a href="search.html?q=technology">▦ Technology</a><a href="search.html?q=sports">◈ Sports</a></div></nav>
+
+<main class="page-section search-page">
+  <div class="search-page-title"><h1>Search News</h1><p id="searchSubtitle">Loading results...</p></div>
+  <div id="searchGrid" class="news-grid"><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div></div>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

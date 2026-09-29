@@ -1,0 +1,194 @@
+
+          /* ARTICLE PAGE */
+
+
+         .article-wrapper {
+             width: min(1200px, 94%);
+             margin: 45px auto 80px;
+         }
+
+         .article-card {
+             background: var(--card-bg, #ffffff);
+             border-radius: 18px;
+             overflow: hidden;
+             border: 1px solid rgba(0, 0, 0, 0.08);
+             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+         }
+
+         .article-image {
+             width: 100%;
+             height: min(560px, 55vw);
+             object-fit: cover;
+             display: block;
+             background: #eee;
+         }
+
+         .article-content {
+             max-width: 950px;
+             margin: auto;
+             padding: 45px 50px 60px;
+         }
+
+         .article-category {
+             display: inline-block;
+             margin-bottom: 15px;
+             padding: 7px 14px;
+             border-radius: 20px;
+             background: #e63946;
+             color: #fff;
+             font-size: 13px;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: .5px;
+         }
+
+         .article-title {
+             margin: 0 0 18px;
+             font-family: "Playfair Display", serif;
+             font-size: clamp(32px, 5vw, 58px);
+             line-height: 1.12;
+             color: #171717;
+         }
+
+         .article-description {
+             font-size: 19px;
+             line-height: 1.7;
+             color: #666;
+             margin-bottom: 22px;
+         }
+
+         .article-meta {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 18px;
+             align-items: center;
+             padding: 18px 0;
+             margin-bottom: 30px;
+             border-top: 1px solid #eee;
+             border-bottom: 1px solid #eee;
+             color: #777;
+             font-size: 14px;
+         }
+
+         .article-body {
+             font-size: 18px;
+             line-height: 1.9;
+             color: #292929;
+         }
+
+         .article-body p {
+             margin: 0 0 22px;
+         }
+
+         .article-source {
+             margin-top: 35px;
+             padding: 18px;
+             border-left: 4px solid #e63946;
+             background: #f7f7f7;
+             border-radius: 6px;
+         }
+
+         .article-source a {
+             color: #e63946;
+             font-weight: 700;
+             text-decoration: none;
+         }
+
+         .article-back {
+             display: inline-flex;
+             align-items: center;
+             gap: 8px;
+             margin-bottom: 22px;
+             color: inherit;
+             text-decoration: none;
+             font-weight: 600;
+         }
+
+         .article-back:hover {
+             color: #e63946;
+         }
+
+         /* Loading */
+
+         .article-loading {
+             min-height: 500px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             gap: 15px;
+         }
+
+         .article-spinner {
+             width: 45px;
+             height: 45px;
+             border: 4px solid #ddd;
+             border-top-color: #e63946;
+             border-radius: 50%;
+             animation: articleSpin .8s linear infinite;
+         }
+
+         @keyframes articleSpin {
+             to {
+                 transform: rotate(360deg);
+             }
+         }
+
+         /* Dark mode */
+
+         body.dark-mode .article-card {
+             background: #171717;
+             border-color: rgba(255, 255, 255, .1);
+         }
+
+         body.dark-mode .article-title {
+             color: #fff;
+         }
+
+         body.dark-mode .article-description {
+             color: #aaa;
+         }
+
+         body.dark-mode .article-meta {
+             border-color: #333;
+             color: #aaa;
+         }
+
+         body.dark-mode .article-body {
+             color: #ddd;
+         }
+
+         body.dark-mode .article-source {
+             background: #222;
+         }
+
+         /* Mobile */
+
+         @media (max-width: 768px) {
+
+             .article-wrapper {
+                 width: 94%;
+                 margin-top: 25px;
+             }
+
+             .article-image {
+                 height: 280px;
+             }
+
+             .article-content {
+                 padding: 30px 22px 40px;
+             }
+
+             .article-title {
+                 font-size: 34px;
+             }
+
+             .article-description {
+                 font-size: 17px;
+             }
+
+             .article-body {
+                 font-size: 17px;
+                 line-height: 1.8;
+             }
+         }

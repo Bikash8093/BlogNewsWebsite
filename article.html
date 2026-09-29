@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Story — BharatNews</title>
+
+  <meta name="description" content="Read the latest news story on BharatNews.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/article.css">
+
+
+</head>
+
+<body>
+
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a href="index.html" class="brand" aria-label="BharatNews Home">
+
+        <img src="assets/logo/bharat-news-logo.png" alt="BharatNews">
+
+      </a>
+
+      <form class="search-box" id="articleSearchForm">
+
+        <span class="search-icon">⌕</span>
+
+        <input id="articleSearch" type="search" placeholder="Search news, topics, places..." autocomplete="off">
+
+        <button type="submit" aria-label="Search">
+          ⌕
+        </button>
+
+      </form>
+
+      <div class="header-actions">
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+
+          <span class="sun">☼</span>
+
+          <span class="toggle-track">
+            <span class="toggle-knob"></span>
+          </span>
+
+        </button>
+
+        <div class="socials">
+
+          <a href="https://youtube.com/">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="https://wa.me/">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://x.com/">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="https://facebook.com/">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://instagram.com/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+        </div>
+
+        <div class="today-date" id="todayDate"></div>
+
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn"> ☰ </button>
+    </div>
+
+  </header>
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="main-nav" id="mainNav">
+
+    <div class="nav-inner">
+
+      <a class="nav-link" href="index.html">
+
+        ⌂ <span>Home</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=India">
+
+        ✦ <span>India</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=Odisha">
+
+        ◉ <span>Odisha</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=politics">
+
+        ♟ <span>Politics</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=business">
+
+        ▥ <span>Business</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=technology">
+
+        ▦ <span>Technology</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=sports">
+
+        ◈ <span>Sports</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=entertainment">
+
+        ▣ <span>Entertainment</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=health">
+
+        ♥ <span>Health</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=education">
+
+        ◆ <span>Education</span>
+
+      </a>
+
+      <a class="nav-link" href="search.html?q=world">
+
+        ◎ <span>World</span>
+
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= ARTICLE ================= -->
+
+  <main>
+
+    <div class="article-wrapper" id="articleContainer">
+
+      <div class="article-loading">
+
+        <div class="article-spinner"></div>
+
+        <span>Loading story...</span>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="brand footer-logo">
+
+          <div class="brand-mark">
+
+            <span class="brand-swoosh brand-saffron"></span>
+
+            <span class="brand-swoosh brand-green"></span>
+
+            <span class="brand-dot">•</span>
+
+          </div>
+
+          <div class="brand-text">
+
+            <strong>
+              <span>Bharat</span>News
+            </strong>
+
+            <small>
+              Real News. Real People. Real India.
+            </small>
+
+          </div>
+
+        </a>
+
+        <p>
+          Your trusted source for the latest news
+          and stories from India and around the world.
+          Stay informed, stay connected.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+        <a href="search.html?q=India">India</a>
+        <a href="search.html?q=Odisha">Odisha</a>
+        <a href="search.html?q=business">Business</a>
+        <a href="search.html?q=technology">Technology</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Popular Topics</h3>
+
+        <div class="topic-pills">
+
+          <a href="search.html?q=India">India News</a>
+          <a href="search.html?q=Cricket">Cricket</a>
+          <a href="search.html?q=Education">Education</a>
+          <a href="search.html?q=Health">Health</a>
+          <a href="search.html?q=Odisha">Odisha News</a>
+          <a href="search.html?q=Bollywood">Bollywood</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-column contact-column">
+
+        <h3>Contact Us</h3>
+
+        <a href="mailto:info@bharatnews.in">
+          <i class="fa-regular fa-envelope"></i> info@bharatnews.in
+        </a>
+
+        <span>
+          <i class="fa-solid fa-location-dot"></i> Bhubaneswar, Odisha, India
+        </span>
+
+        <div class="footer-links">
+
+          <a href="pages/privacy-policy.html">Privacy Policy</a>
+          <a href="pages/about-us.html">About Us</a>
+          <a href="pages/terms.html">Terms of Use</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="footerYear"></span>
+        BharatNews. All Rights Reserved.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <div class="toast" id="toast"></div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="js/config.js"></script>
+  <script src="js/article.js"></script>
+
+  <script>
+
+    /* Date */
+
+    const todayDate = document.getElementById("todayDate");
+
+    if (todayDate) {
+
+      todayDate.textContent =
+        new Date().toLocaleDateString(
+          "en-IN",
+          {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+          }
+        );
+
+    }
+
+
+    /* Footer year */
+
+    const footerYear =
+      document.getElementById("footerYear");
+
+    if (footerYear) {
+      footerYear.textContent =
+        new Date().getFullYear();
+    }
+
+
+    /* Dark mode */
+
+    const themeToggle =
+      document.getElementById("themeToggle");
+
+    if (themeToggle) {
+
+      const savedTheme =
+        localStorage.getItem("bharatnews_theme");
+
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+
+      themeToggle.addEventListener(
+        "click",
+        () => {
+
+          document.body.classList.toggle(
+            "dark-mode"
+          );
+
+          localStorage.setItem(
+            "bharatnews_theme",
+            document.body.classList.contains(
+              "dark-mode"
+            )
+              ? "dark"
+              : "light"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* Search */
+
+    const searchForm =
+      document.getElementById(
+        "articleSearchForm"
+      );
+
+    const searchInput =
+      document.getElementById(
+        "articleSearch"
+      );
+
+    if (searchForm && searchInput) {
+
+      searchForm.addEventListener(
+        "submit",
+        function (e) {
+
+          e.preventDefault();
+
+          const query =
+            searchInput.value.trim();
+
+          if (!query) return;
+
+          window.location.href =
+            `search.html?q=${encodeURIComponent(query)}`;
+
+        }
+      );
+
+    }
+
+
+    /* Mobile menu */
+
+    const mobileMenuBtn =
+      document.getElementById(
+        "mobileMenuBtn"
+      );
+
+    const mainNav =
+      document.getElementById(
+        "mainNav"
+      );
+
+    if (mobileMenuBtn && mainNav) {
+
+      mobileMenuBtn.addEventListener(
+        "click",
+        () => {
+
+          mainNav.classList.toggle(
+            "mobile-open"
+          );
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
+
+</html>
